@@ -6,6 +6,7 @@ import com.github.chen0040.tensorflow.classifiers.models.AudioClassifier;
 import com.github.chen0040.tensorflow.classifiers.models.TrainedModelLoader;
 import com.github.chen0040.tensorflow.classifiers.utils.ImageUtils;
 import com.github.chen0040.tensorflow.classifiers.utils.InputStreamUtils;
+import com.github.chen0040.tensorflow.classifiers.utils.ResourceUtils;
 import com.github.chen0040.tensorflow.classifiers.utils.TensorUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,6 +32,12 @@ public class Cifar10AudioClassifier implements TrainedModelLoader, AudioClassifi
         byte[] bytes = InputStreamUtils.getBytes(inputStream);
         graph.importGraphDef(bytes);
 
+    }
+
+    @Override
+    public void load_model() throws IOException {
+        InputStream inputStream = ResourceUtils.getInputStream("tf_models/cifar10.pb");
+        load_model(inputStream);
     }
 
 

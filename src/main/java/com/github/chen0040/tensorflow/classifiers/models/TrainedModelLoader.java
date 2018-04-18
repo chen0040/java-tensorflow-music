@@ -5,4 +5,5 @@ import java.io.InputStream;
 
 public interface TrainedModelLoader {
     void load_model(InputStream inputStream) throws IOException;
+    void load_model() throws IOException;
 }
