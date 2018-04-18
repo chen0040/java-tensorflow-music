@@ -2,6 +2,21 @@
 
 Music classification, music search, music recommender and music encoder implemented in Tensorflow and Java
 
+The trained models were obtained from the [Keras audio deep learning project](https://github.com/chen0040/java-audio-embedding) 
+
+# Install
+
+Add the following dependency to your POM file:
+
+```xml
+<dependency>
+  <groupId>com.github.chen0040</groupId>
+  <artifactId>java-tensorflow-music</artifactId>
+  <version>1.0.1</version>
+</dependency>
+```
+
+# Usage
 
 ### Run audio classifier in Java
  
