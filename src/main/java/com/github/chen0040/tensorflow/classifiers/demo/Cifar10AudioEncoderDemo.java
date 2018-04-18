@@ -20,9 +20,8 @@ public class Cifar10AudioEncoderDemo {
 
 
     public static void main(String[] args) throws IOException {
-        InputStream inputStream = ResourceUtils.getInputStream("tf_models/cifar10.pb");
         Cifar10AudioClassifier classifier = new Cifar10AudioClassifier();
-        classifier.load_model(inputStream);
+        classifier.load_model();
 
         List<String> paths = FileUtils.getAudioFiles();
 

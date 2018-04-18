@@ -18,9 +18,8 @@ public class ResNetV2AudioEncoderDemo {
 
 
     public static void main(String[] args) throws IOException {
-        InputStream inputStream = ResourceUtils.getInputStream("tf_models/resnet-v2.pb");
         ResNetV2AudioClassifier classifier = new ResNetV2AudioClassifier();
-        classifier.load_model(inputStream);
+        classifier.load_model();
 
         List<String> paths = FileUtils.getAudioFiles();
 
